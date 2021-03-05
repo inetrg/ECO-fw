@@ -1,0 +1,47 @@
+INCLUDES += -I$(CURDIR)/include
+
+ifneq (,$(filter sensors,$(USEMODULE)))
+  DIRS += sensors
+  USEMODULE += sds011
+  USEMODULE += bme280
+  USEMODULE += xtimer
+endif
+
+ifneq (,$(filter eco,$(USEMODULE)))
+  DIRS += eco
+  USEMODULE += ina22x
+  USEMODULE += xtimer
+endif
+
+ifneq (,$(filter radio,$(USEMODULE)))
+  DIRS += radio
+endif
+
+ifneq (,$(filter coap,$(USEMODULE)))
+  DIRS += coap
+  USEMODULE += gcoap
+endif
+
+ifneq (,$(filter cbor_util,$(USEMODULE)))
+  DIRS += cbor_util
+endif
+
+ifneq (,$(filter node_time,$(USEMODULE)))
+  DIRS += node_time
+endif
+
+ifneq (,$(filter backup_reg,$(USEMODULE)))
+  DIRS += backup_reg
+endif
+
+ifneq (,$(filter gpio_wakeup,$(USEMODULE)))
+  DIRS += gpio_wakeup
+endif
+
+ifneq (,$(filter minmea_helper,$(USEMODULE)))
+  DIRS += minmea_helper
+endif
+
+ifneq (,$(filter pnmea,$(USEMODULE)))
+  DIRS += pnmea
+endif
