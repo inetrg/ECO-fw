@@ -5,7 +5,7 @@ APPLICATION = app-sane-bus
 BOARD ?= nucleo-l476rg
 
 # This has to be the absolute path to the RIOT base directory:
-RIOTBASE ?= $(CURDIR)/../..
+RIOTBASE ?= $(CURDIR)/../../RIOT
 
 #disable auto init so no sensor/radio/ etc. is initialized (wastes energy if not needed)
 DISABLE_MODULE += auto_init
