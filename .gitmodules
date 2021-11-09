@@ -1,0 +1,4 @@
+[submodule "RIOT"]
+	path = RIOT
+	url = https://github.com/MichelRottleuthner/RIOT.git
+	branch = gnrc_lorawan_dev_eco
